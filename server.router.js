@@ -38,6 +38,10 @@ router.post("/player", (req, res) => {
       res.status(201).json(data);
     });
   });
+  router.get("/", (req, res) => {
+    
+      res.status(200).send("<h1>asad</h1>");
+  });
   router.put("/players/:id", (req, res) => {
     PlayerModule.findByIdAndUpdate(req.params.id,req.body, (err, data) => {
       if (err) throw err;
