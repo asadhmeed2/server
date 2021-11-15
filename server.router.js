@@ -39,7 +39,6 @@ router.post("/player", (req, res) => {
     });
   });
   router.get("/", (req, res) => {
-    
       res.status(200).send("<h1>asad</h1>");
   });
   router.put("/players/:id", (req, res) => {
