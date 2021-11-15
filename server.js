@@ -12,7 +12,7 @@ const Router= require("./server.router").router;
 app.use('/',Router)
 
 mongoose.connect(
-  `mongodb+srv://asadhm:1234asad@cluster0.jdmn4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
+  `mongodb+srv://asadhm:${process.env.mongodbPassword}@cluster0.jdmn4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
   { useNewUrlParser: true, useUnifiedTopology: true },
   () => {
     console.log("Connected to DB");
